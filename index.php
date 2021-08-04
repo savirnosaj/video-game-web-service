@@ -4,7 +4,7 @@
 <style>
 body {font-family:georgia;}
 </style>
-<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 $(document).ready(function() {  
@@ -37,6 +37,17 @@ function toConsole(data)
 function bondJSON(data){
 //JSON processing data goes here
 	console.log(data)
+
+	//this loads the data on the page, but it's all bunched up
+	// $('#output').text(JSON.stringify(data));
+
+	// this create a map of the JSON on our page
+	let myData = JSON.stringify(data, null, 4);
+
+	myData = '<pre>' + myData + '</pre>';
+
+	$("#output").html(myData);
+
 }
 
 </script>
