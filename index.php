@@ -20,7 +20,13 @@ $(document).ready(function() {
 function loadAJAX(cat)
 {
 	//AJAX connection will go here
-    alert('cat is: ' + cat);
+    // alert('cat is: ' + cat);
+	$.ajax({
+		type: 'GET',
+		dataType: 'json',
+		url: 'api.php?cat=' + cat,
+		success: bondJSON
+	});
 }
     
 function toConsole(data)
@@ -30,6 +36,7 @@ function toConsole(data)
 
 function bondJSON(data){
 //JSON processing data goes here
+	console.log(data)
 }
 
 </script>
