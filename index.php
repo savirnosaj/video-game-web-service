@@ -52,7 +52,9 @@ function bondJSON(data){
 //JSON processing data goes here
 	console.log(data)
 
-	$('#fimTitle').html(data.title);
+	$('#filmTitle').html(data.title);
+
+	$('#films').html('');
 	$.each(data.Films, function(i, item){
 		let myFilm = bondTemplate(item);
 
