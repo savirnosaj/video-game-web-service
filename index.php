@@ -73,16 +73,16 @@ function bondJSON(data){
 		<h3 id="filmtitle">Title Will Go Here</h3>
 		<div id="films">
 			<div class="film">
-				<b>Film: </b> 1 </b>
-				<b>Title: </b> Dr. No </b>
-				<b>Year: </b> 1962 </b>
-				<b>Director: </b> Terence Young </b>
-				<b>Producers: </b> Harry Saltzman and Albert R. Broccoli </b>
-				<b>Writers: </b> Richard Maibaum, Johanna Harwood and Berkely Mather </b>
-				<b>Composer: </b> Monty Norman </b>
-				<b>Bond: </b> Sean Connery </b>
-				<b>Budget: </b> 1,000,000.00 </b>
-				<b>Box Office: </b> 59,567,035.00 </b>
+				<b>Film: </b> 1 <br>
+				<b>Title: </b> Dr. No <br>
+				<b>Year: </b> 1962 <br>
+				<b>Director: </b> Terence Young <br>
+				<b>Producers: </b> Harry Saltzman and Albert R. Broccoli <br>
+				<b>Writers: </b> Richard Maibaum, Johanna Harwood and Berkely Mather <br>
+				<b>Composer: </b> Monty Norman <br>
+				<b>Bond: </b> Sean Connery <br>
+				<b>Budget: </b> 1,000,000.00 </br>
+				<b>Box Office: </b> 59,567,035.00 <br>
 				<div class="pic"> <img src="thumbnails/dr-no.jpg" alt=""></div>
 			</div>
 			<p>Films will go here</p>
