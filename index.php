@@ -68,8 +68,8 @@
 				// $('#output').text(JSON.stringify(data));
 				
 				// this creates a map of the JSON on our page
-				let myData = JSON.stringify(data, null, 4);
-				myData = '<pre>' + myData + '</pre>';
+				let myData = JSON.stringify(data,null,4);
+				myData = "<pre>" + myData + "</pre>";
 				$("#output").html(myData);
 
 			}
