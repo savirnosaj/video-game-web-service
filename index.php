@@ -3,7 +3,7 @@
 		<title>Video Game Web Service</title>
 		<style>
 			body {font-family:georgia;}
-			.film {
+			.game {
 				border:1px solid #E77DC2;
 				border-radius: 5px;
 				padding: 5px;
