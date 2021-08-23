@@ -76,7 +76,6 @@
 			function bondTemplate(film){
 				return `
 					<div class="game">
-						<b>Game: </b> ${game.Game} <br>
 						<b>Title: </b> ${game.Title} <br>
 						<b>Genre: </b> ${game.Genre} <br>
 						<b>Company: </b> ${game.Company} <br>
