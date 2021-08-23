@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Harry Potter Web Service Demo</title>
+		<title>Video Game Web Service</title>
 		<style>
 			body {font-family:georgia;}
 			.film {
@@ -47,15 +47,15 @@
 				console.log(data);
 
 				//indentifies the type of data returned
-				$('#filmtitle').html(data.title);
+				$('#gametitle').html(data.title);
 
 				//clears other clicked films
-				$('#films').html("");
+				$('#games').html("");
 				
 				//loop through films and add template
 				$.each(data.games,function(i,item){
 					let myFilm = gameTemplate(item);
-					$('<div></div>').html(myFilm).appendTo('#films');
+					$('<div></div>').html(myFilm).appendTo('#games');
 				});
 
 				//This loads the data on the page, but it is all bunched
@@ -71,28 +71,31 @@
 			function gameTemplate(game){
 				return `
 					<div class="film">
-					<b>Film:</b>${game.Film}<br />
-					<b>Title:</b>${game.Title}<br />
-					<b>Year:</b>${game.Year}<br />
-					<b>Director:</b>${game.Director}<br />
-					<b>Producers:</b>${game.Producers}<br />
-					<b>Writers:</b>${game.Writers}<br />
-					<b>Composer:</b>${game.Composer}<br />
-					<b>Budget:</b>${game.Budget}<br />
-					<b>Box Office:</b>${game.BoxOffice}<br />
-					<div class="pic">
-						<img width="100px" height="auto" src="thumbnails/${game.Image}" />
+						<b>Film:</b>${game.Game}<br />
+						<b>Title:</b>${game.Title}<br />
+						<b>Genre:</b>${game.Genre}<br />
+						<b>Company:</b>${game.Company}<br />
+						<b>Year:</b>${game.Year}<br />
+						<b>Rating:</b>${game.Rating}<br />
+						<div class="pic">
+							<img width="100px" height="auto" src="thumbnails/${game.Image}" />
+						</div>
 					</div>
 				`;
 			}
 		</script>
 	</head>
+
 	<body>
+
 		<h1>Video Game Web Service</h1>
+		
 		<a href="year" class="category">Video Games By Year</a><br />
 		<a href="title" class="category">Video Games by Title</a>
-		<h3 id="filmtitle">Title Will Go Here</h3>
-		<div id="films"></div>
+
+		<h3 id="gametitle">Title Will Go Here</h3>
+		<div id="games"></div>
 		<div id="output">Results go here</div>
+
 	</body>
 </html>
