@@ -33,15 +33,13 @@
 
 			function loadAJAX(cat)
 			{
+				//AJAX connection will go here
+				//alert('cat is: ' + cat);
 				$.ajax({
 					type: "GET",
 					dataType: "json",
 					url: "api.php?cat=" + cat,
-					success: bondJSON,
-					error: function(xhr, status, error){
-						let errorMessage = xhr.status + ': ' + xhr.statusText
-						alert('Error - ' + errorMessage);
-					}
+					success: bondJSON
 				});
 			}
 				
