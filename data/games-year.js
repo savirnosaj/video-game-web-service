@@ -1,6 +1,6 @@
 {
 	"title": "Harry Potter Films by Box Office Totals",
-	"films":
+	"games":
 	[
 		{
 			"Film":1,

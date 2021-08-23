@@ -1,7 +1,7 @@
 {
 	"title": "Bond Films by Box Office Totals",
 	
-	"films":[
+	"games":[
              {
 				"Film":23,
 				"Title":"Skyfall",
