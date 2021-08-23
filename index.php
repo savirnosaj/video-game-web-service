@@ -58,31 +58,31 @@
 
 				$('#films').html('');
 				
-				$.each(data.games, function(i, item){
-						let myGame = bondTemplate(item);
+				// $.each(data.games, function(i, item){
+				// 		let myGame = bondTemplate(item);
 
-					$('<div></div>').html(myGame).appendTo('#films');
-				});
+				// 	$('<div></div>').html(myGame).appendTo('#films');
+				// });
 
 				//this loads the data on the page, but it's all bunched up
 				// $('#output').text(JSON.stringify(data));
 				
 				// this creates a map of the JSON on our page
-				// let myData = JSON.stringify(data, null, 4);
-				// myData = '<pre>' + myData + '</pre>';
-				// $("#output").html(myData);
+				let myData = JSON.stringify(data, null, 4);
+				myData = '<pre>' + myData + '</pre>';
+				$("#output").html(myData);
 
 			}
 
-			function bondTemplate(game){
+			function bondTemplate(games){
 				return `
 					<div class="film">
-						<b>Title: </b> ${game.Title} <br>
-						<b>Genre: </b> ${game.Genre} <br>
-						<b>Company: </b> ${game.Company} <br>
-						<b>Year: </b> ${game.Year} <br>
-						<b>Rating: </b> ${game.Rating} <br>
-						<div class="pic"> <img src="thumbnails/${game.Image}" alt=""></div>
+						<b>Title: </b> ${games.Title} <br>
+						<b>Genre: </b> ${games.Genre} <br>
+						<b>Company: </b> ${games.Company} <br>
+						<b>Year: </b> ${games.Year} <br>
+						<b>Rating: </b> ${games.Rating} <br>
+						<div class="pic"> <img src="thumbnails/${games.Image}" alt=""></div>
 					</div>
 				`;
 			}
