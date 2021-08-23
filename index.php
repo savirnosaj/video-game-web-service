@@ -52,12 +52,16 @@
 
 			function bondJSON(data){
 			//JSON processing data goes here
-				console.log(data)
-				
-				$.each(data.films, function(i, item){
-						let myFilm = bondTemplate(item);
+				console.log(data);
 
-					$('<div></div>').html(myFilm).appendTo('#films');
+				$('#filmTitle').html(data.title);
+
+				$('#films').html('');
+				
+				$.each(data.games, function(i, item){
+						let myGame = bondTemplate(item);
+
+					$('<div></div>').html(myGame).appendTo('#films');
 				});
 
 				//this loads the data on the page, but it's all bunched up
@@ -67,10 +71,6 @@
 				// let myData = JSON.stringify(data, null, 4);
 				// myData = '<pre>' + myData + '</pre>';
 				// $("#output").html(myData);
-
-				$('#filmTitle').html(data.title);
-
-				$('#films').html('');
 
 			}
 
