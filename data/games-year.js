@@ -1,6 +1,6 @@
 {
 	"title": "Video Games by Year",
-	"games":[
+	"films":[
                 {
                     "Title":"Sonic The Hedgehog",
                     "Genre":"Platformer",
