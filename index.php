@@ -34,7 +34,7 @@
 					type: "GET",
 					dataType: "json",
 					url: "api.php?cat=" + cat,
-					success: gamesJSON
+					success: gameJSON
 				});
 			}
 
