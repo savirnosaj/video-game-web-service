@@ -3,7 +3,7 @@
 		<title>Video Game Web Service</title>
 		<style>
 			body {font-family:georgia;}
-			.film{
+			.game{
 				border:1px solid #E77DC2;
 				border-radius: 5px;
 				padding: 5px;
@@ -52,13 +52,13 @@
 			//JSON processing data goes here
 				console.log(data)
 
-				$('#filmTitle').html(data.title);
+				$('#gameTitle').html(data.title);
 
-				$('#films').html('');
-				$.each(data.films, function(i, item){
-					let myFilm = bondTemplate(item);
+				$('#games').html('');
+				$.each(data.games, function(i, item){
+					let myGame = bondTemplate(item);
 
-					$('<div></div>').html(myFilm).appendTo('#films');
+					$('<div></div>').html(myGame).appendTo('#games');
 				});
 
 				//this loads the data on the page, but it's all bunched up
@@ -73,20 +73,16 @@
 
 			}
 
-			function bondTemplate(film){
+			function bondTemplate(game){
 				return `
-					<div class="film">
-						<b>Film: </b> ${film.Film} <br>
-						<b>Title: </b> ${film.Title} <br>
-						<b>Year: </b> ${film.Year} <br>
-						<b>Director: </b> ${film.Director} <br>
-						<b>Producers: </b> ${film.Producers} <br>
-						<b>Writers: </b> ${film.Writers} <br>
-						<b>Composer: </b> ${film.Composer} <br>
-						<b>Bond: </b> ${film.Bond} <br>
-						<b>Budget: </b> ${film.Budget} </br>
-						<b>Box Office: </b> ${film.BoxOffice} <br>
-						<div class="pic"> <img src="thumbnails/${film.Image}" alt=""></div>
+					<div class="game">
+						<b>Game: </b> ${game.Game} <br>
+						<b>Title: </b> ${game.Title} <br>
+						<b>Genre: </b> ${game.Genre} <br>
+						<b>Company: </b> ${game.Company} <br>
+						<b>Year: </b> ${game.Year} <br>
+						<b>Rating: </b> ${game.Rating} <br>
+						<div class="pic"> <img src="thumbnails/${game.Image}" alt=""></div>
 					</div>
 				`;
 			}
@@ -96,10 +92,10 @@
 
 	<body>
 		<h1>Video Game Web Service</h1>
-		<a href="year" class="category">Bond Films By Year</a><br />
-		<a href="box" class="category">Bond Films By International Box Office Totals</a>
-		<h3 id="filmtitle">Title Will Go Here</h3>
-		<div id="films"></div>
+		<a href="year" class="category">Video Games By Year</a><br />
+		<a href="box" class="category">Video Games By International Box Office Totals</a>
+		<h3 id="gametitle">Title Will Go Here</h3>
+		<div id="games"></div>
 		<div id="output">Results go here</div>
 	</body>
 
