@@ -74,15 +74,15 @@
 
 			}
 
-			function bondTemplate(film){
+			function bondTemplate(game){
 				return `
 					<div class="film">
-						<b>Title: </b> ${film.Title} <br>
-						<b>Genre: </b> ${film.Genre} <br>
-						<b>Company: </b> ${film.Company} <br>
-						<b>Year: </b> ${film.Year} <br>
-						<b>Rating: </b> ${film.Rating} <br>
-						<div class="pic"> <img src="thumbnails/${film.Image}" alt=""></div>
+						<b>Title: </b> ${game.Title} <br>
+						<b>Genre: </b> ${game.Genre} <br>
+						<b>Company: </b> ${game.Company} <br>
+						<b>Year: </b> ${game.Year} <br>
+						<b>Rating: </b> ${game.Rating} <br>
+						<div class="pic"> <img src="thumbnails/${game.Image}" alt=""></div>
 					</div>
 				`;
 			}
