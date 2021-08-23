@@ -29,10 +29,10 @@ if(isset($_REQUEST['cat']))
 	switch($_REQUEST['cat'])
 	{//determine contents of 'cat'
 		case "box":
-			include('data/harry-potter-box-office.js'); //"box" orders by box office results
+			include('data/games-title.js'); //"box" orders by box office results
 			break;
 		default:
-			include('data/harry-potter-year.js'); //default orders by year
+			include('data/games-year.js'); //default orders by year
 	}
 }else{//if not data sent, inform calling application
 	echo "Incorrect parameter sent";
