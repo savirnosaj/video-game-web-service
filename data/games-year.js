@@ -1,7 +1,7 @@
 {
 	"title": "Video Games by Year",
-	"games":
-	[
+
+	"games":[
 		{
 			"Game":1,
 			"Title":"Sonic The Hedgehog",

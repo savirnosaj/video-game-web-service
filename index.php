@@ -43,7 +43,7 @@
 				console.log(data); //to view,use Chrome console, ctrl + shift + j
 			}
 
-			function potterJSON(data){
+			function gameJSON(data){
 				console.log(data);
 
 				//indentifies the type of data returned
@@ -70,7 +70,7 @@
 			}
 			function gameTemplate(game){
 				return `
-					<div class="film">
+					<div class="game">
 						<b>Film:</b>${game.Game}<br />
 						<b>Title:</b>${game.Title}<br />
 						<b>Genre:</b>${game.Genre}<br />

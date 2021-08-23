@@ -1,5 +1,5 @@
 {
-	"title": "Bond Games by Box Office Totals",
+	"title": "Video Games by Title",
 	
 	"games":[
 		{
