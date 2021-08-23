@@ -45,6 +45,7 @@
 
 			function potterJSON(data){
 				console.log(data);
+
 				//indentifies the type of data returned
 				$('#filmtitle').html(data.title);
 
@@ -56,38 +57,40 @@
 					let myFilm = gameTemplate(item);
 					$('<div></div>').html(myFilm).appendTo('#films');
 				});
+
 				//This loads the data on the page, but it is all bunched
 				//$("#output").text(JSON.stringify(data));
 				//this creates a map of JSON on our page
+
 				/*
 				let myData = JSON.stringify(data,null,4);
 				myData = "<pre>" + myData + "</pre>";
 				$("#output").html(myData);
 				*/
 			}
-			function gameTemplate(film){
+			function gameTemplate(game){
 				return `
 					<div class="film">
-					<b>Film:</b>${film.Film}<br />
-					<b>Title:</b>${film.Title}<br />
-					<b>Year:</b>${film.Year}<br />
-					<b>Director:</b>${film.Director}<br />
-					<b>Producers:</b>${film.Producers}<br />
-					<b>Writers:</b>${film.Writers}<br />
-					<b>Composer:</b>${film.Composer}<br />
-					<b>Budget:</b>${film.Budget}<br />
-					<b>Box Office:</b>${film.BoxOffice}<br />
+					<b>Film:</b>${game.Film}<br />
+					<b>Title:</b>${game.Title}<br />
+					<b>Year:</b>${game.Year}<br />
+					<b>Director:</b>${game.Director}<br />
+					<b>Producers:</b>${game.Producers}<br />
+					<b>Writers:</b>${game.Writers}<br />
+					<b>Composer:</b>${game.Composer}<br />
+					<b>Budget:</b>${game.Budget}<br />
+					<b>Box Office:</b>${game.BoxOffice}<br />
 					<div class="pic">
-					<img width="100px" height="auto" src="thumbnails/${film.Image}" />
+						<img width="100px" height="auto" src="thumbnails/${game.Image}" />
 					</div>
 				`;
 			}
 		</script>
 	</head>
 	<body>
-		<h1>Harry Potter Web Service</h1>
-		<a href="year" class="category">Harry Potter Films By Year</a><br />
-		<a href="box" class="category">Harry Potter Films By International Box Office Totals</a>
+		<h1>Video Game Web Service</h1>
+		<a href="year" class="category">Video Games By Year</a><br />
+		<a href="title" class="category">Video Games by Title</a>
 		<h3 id="filmtitle">Title Will Go Here</h3>
 		<div id="films"></div>
 		<div id="output">Results go here</div>
