@@ -6,7 +6,7 @@
 			.game {
 				border:1px solid #E77DC2;
 				border-radius: 5px;
-				padding: 5px;
+				padding: 8px;
 				margin-bottom:5px;
 				position:relative;
 			}
